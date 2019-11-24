@@ -1,0 +1,33 @@
+<html>
+    <head>
+    <% include templates/head.ejs %>
+    <script>var pag = 'listar';</script>
+    </head>
+    <body>
+        <% include templates/nav.ejs %>     
+      <table class="table table-hover table-bordered" style="margin-top:55px;">
+      <tr>
+          <td>Nome</td>
+          <td>Sobrenome</td>
+          <td>Nascimento</td>
+          <td>Endereço</td>
+          <td>Telefone</td>
+          <td>E-mail</td>
+          <td> Editar registro</td>
+		  <td> Deletar registro</td>
+      </tr>
+          <% for (var i=0;i<busca.length;i++){ %>
+              <tr>
+                  <td><%= busca[i].usuario %></td>
+                  <td><%= busca[i].sobrenome %></td>
+                  <td><%= busca[i].dtnascimento %></td>
+                  <td><%= busca[i].endereco %></td>
+                  <td><%= busca[i].tel %></td>
+                  <td><%= busca[i].email %></td>
+                  <td><a href="/buscaEditar/<%= busca[i].id_usuario%>">Editar</a></td>
+				  <td><a href="/deletar/<%= busca[i].id_usuario%>">Deletar</a></td>
+              </tr>
+        <%  } %>
+      </table>
+  </body>
+</html>

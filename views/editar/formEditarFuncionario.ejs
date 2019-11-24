@@ -1,0 +1,42 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="icon" href="img/favicon.icon">
+        <title>Paw e Pw</title>
+	</head>
+	<body style="background-color: #0087D4;">
+        <div class="container-fluid">
+            <form class="w-50 mt-5 mx-auto shadow p-3 mb-5 bg-white rounded" action='/editarFuncionario' method='post'>
+                <div class="form-group p-5">
+                    <h2 class="mb-5">Editar Funcionário</h2>
+                        Nome: <input class="form-control" type="text" name="nome" value="<%= busca[0].nome %>"/><br/>
+                        Sobrenome: <input class="form-control" type="text" name="sobrenome" value="<%= busca[0].sobrenome %>"/><br/>
+                        Endereço: <input class="form-control" type="text" name="endereco" value="<%= busca[0].endereco %>"/><br/>
+                        <div class="form-row">
+                            <div class="col">
+                                Nacimento: <input class="form-control" type="text" name="nascimento" value="<%= busca[0].nascimento %>"/><br/>
+                            </div>
+                            <div class="col">
+                                Rg: <input class="form-control" type="text" name="rg" value="<%= busca[0].rg %>"/><br/>
+                            </div>
+                            <div class="col">
+                                CPF: <input class="form-control" type="text" name="cpf" value="<%= busca[0].cpf %>"/><br/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                Data de admissão: <input class="form-control" type="text" name="dt_adm" value="<%= busca[0].dt_adm %>"/><br/>
+                            </div>
+                            <div class="col">
+                                Salário: <input class="form-control" type="text" name="salario" value="<%= busca[0].salario %>"/><br/>
+                            </div>
+                        </div>
+                        Cargo: <input class="form-control" type="text" name="cargo" value="<%= busca[0].cargo %>"/><br/>
+                    <input type="hidden" name="idfuncionarios" value="<%= busca[0].idfuncionarios %>"/>
+                    <input class="btn btn-primary"type="submit" value="Enviar"/>
+                </div>
+            </form>
+        </div>
+	</body>
+	</body>
+</html>

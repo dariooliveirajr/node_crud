@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <% include templates/head.ejs %>
+    <script>var pag = 'listar_produto';</script>
+    </head>
+    
+	<body>
+        <% include templates/nav.ejs %>
+		
+		<table class="table table-hover table-bordered" style="margin-top:55px;">
+			<tr>
+				<td>NOME</td>
+				<td>MARCA</td>
+				<td>VALIDADE</td>
+				<td>EDITAR</td>
+				<td>DELETAR</td>
+			</tr>
+            <%  for(var i=0;i<busca.length;i++){ %>
+                <tr>
+                    <td><%= busca[i].nome %></td>
+                    <td><%= busca[i].marca %></td>
+                    <td><%= busca[i].validade %></td>
+                    <td><a href="/buscaEditarProduto/<%= busca[i].idprodutos %>">Editar</a></td>
+                    <td><a href="/deletarProduto/<%= busca[i].idprodutos %>">Deletar</a></td>
+                </tr>
+            <% } %>
+		</table>
+        
+	</body>
+</html>

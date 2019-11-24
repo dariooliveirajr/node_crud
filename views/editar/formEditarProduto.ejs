@@ -1,0 +1,28 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="icon" href="img/favicon.icon">
+        <title>Paw e Pw</title>
+	</head>       
+    <body style="background-color: #0087D4;">        
+        <div class="container-fluid">
+            <form class="w-50 mt-5 mx-auto shadow p-3 mb-5 bg-white rounded" action='/editarProduto' method='post'>
+                <div class="form-group p-5">
+                    <h2 class="mb-5">Editar Produto</h2>
+                        Nome: <input class="form-control" type="text" name="nome" value="<%= busca[0].nome %>"/><br/>
+                        <div class="form-row">
+                            <div class="col">
+                                Marca: <input class="form-control" type="text" name="marca" value="<%= busca[0].marca %>"/><br/>
+                            </div>
+                            <div class="col">
+                                Validade: <input class="form-control" type="text" name="validade" value="<%= busca[0].validade %>"/><br/>
+                            </div>
+                        </div>
+                    <input type="hidden" name="idprodutos" value="<%= busca[0].idprodutos %>"/>
+                    <input class="btn btn-primary"type="submit" value="Enviar"/>
+                </div>
+            </form>
+        </div>
+	</body>
+	</body>
+</html>

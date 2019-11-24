@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <% include ../templates/head.ejs %>
+    </head>
+	<body style="background-color: #0087D4;">        
+        <div class="container-fluid">
+            <form class="w-50 mt-5 mx-auto shadow p-3 mb-5 bg-white rounded" action='/produto' method='post'>
+                <div class="form-group p-5">
+                    <h2 class="mb-5">Cadastro de Produto</h2>
+                        Nome: <input class="form-control" type="text" name="nome"/><br/>
+                        <div class="form-row">
+                            <div class="col">
+                                Marca: <input class="form-control" type="text" name="marca"/><br/>
+                            </div>
+                            <div class="col">
+                                Validade: <input class="form-control" type="text" name="validade"/><br/>
+                            </div>
+                        </div>
+                    <input class="btn btn-primary"type="submit" value="Enviar"/>
+                </div>
+            </form>
+        </div>
+	</body>
+</html>

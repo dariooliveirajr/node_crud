@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <% include ../templates/head.ejs %>
+    </head>
+	<body style="background-color: #0087D4;">
+        <div class="container-fluid">
+            <form class="w-50 mt-5 mx-auto shadow p-3 mb-5 bg-white rounded" action='/funcionario' method='post'>
+                <div class="form-group p-5">
+                    <h2 class="mb-5">Cadastro de Funcionário</h2>
+                        Nome: <input class="form-control" type="text" name="nome"/><br/>
+                        Sobrenome: <input class="form-control" type="text" name="sobrenome"/><br/>
+                        Endereço: <input class="form-control" type="text" name="endereco"/><br/>
+                        <div class="form-row">
+                            <div class="col">
+                                Nacimento: <input class="form-control" type="text" name="nascimento"/><br/>
+                            </div>
+                            <div class="col">
+                                Rg: <input class="form-control" type="text" name="rg"/><br/>
+                            </div>
+                            <div class="col">
+                                CPF: <input class="form-control" type="text" name="cpf"/><br/>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                Data de admissão: <input class="form-control" type="text" name="dt_adm"/><br/>
+                            </div>
+                            <div class="col">
+                                Salário: <input class="form-control" type="text" name="salario"/><br/>
+                            </div>
+                        </div>
+                        Cargo: <input class="form-control" type="text" name="cargo"/><br/>
+                    <input class="btn btn-primary"type="submit" value="Enviar"/>
+                </div>
+            </form>
+        </div>
+	</body>
+</html>

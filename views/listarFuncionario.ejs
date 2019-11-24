@@ -1,0 +1,39 @@
+<html>
+   <head>
+      <% include templates/head.ejs %>
+      <script>var pag = 'listar_funcionario';</script>
+    </head>
+	
+	<body>
+        <% include templates/nav.ejs %>
+
+		<table class="table table-hover table-bordered" style="margin-top:55px;">
+			<tr>
+				<td>NOME</td>
+				<td>SOBRENOME</td>
+				<td>NASCIMENTO</td>
+				<td>ENDERECO</td>
+				<td>RG</td>
+                <td>CPF</td>
+				<td>DATA DE ADMISSÃO</td>
+				<td>CARGO</td>
+				<td>SALÁRIO</td>
+			</tr>
+			<%  for(var i=0;i<busca.length;i++){ %>
+			<tr>
+				<td><%= busca[i].nome %></td>
+				<td><%= busca[i].sobrenome %></td>
+				<td><%= busca[i].nascimento %></td>
+				<td><%= busca[i].endereco %></td>
+				<td><%= busca[i].rg %></td>
+				<td><%= busca[i].cpf %></td>
+				<td><%= busca[i].dt_adm %></td>
+				<td><%= busca[i].cargo %></td>
+				<td>R$ <%= busca[i].salario %></td>
+				<td><a href="/buscaEditarFuncionario/<%= busca[i].idfuncionarios %>">Editar</a></td>
+				<td><a href="/deletarFuncionario/<%= busca[i].idfuncionarios %>">Deletar</a></td>
+			</tr>
+	       <% } %>
+		</table>
+	</body>
+</html>

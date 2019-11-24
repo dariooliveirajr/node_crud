@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="icon" href="img/favicon.icon">
+        <title>Paw e Pw</title>
+	</head>
+    <body style="background-color: #0087D4;">
+        <div class="container-fluid">
+            <form class="w-50 mt-5 mx-auto shadow p-3 mb-5 bg-white rounded" action='/editar' method='post'>
+                <div class="form-group p-5">
+                    <h2 class="mb-5">Editar Usuário</h2>
+                        Nome: <input class="form-control" type="text" name="usuario" value="<%= busca[0].usuario %>"/><br/>
+                        Sobrenome: <input class="form-control" type="text" name="sobrenome" value="<%= busca[0].sobrenome %>"/><br/>
+                        E-mail: <input class="form-control" type="email" name="email" value="<%= busca[0].email %>"/><br/>
+                        Endereço: <input class="form-control" type="text" name="endereco" value="<%= busca[0].endereco %>"/><br/>
+                        <div class="form-row">
+                            <div class="col">
+                                Nacimento: <input class="form-control" type="text" name="dtnascimento" value="<%= busca[0].dtnascimento %>"/><br/>
+                            </div>
+                            <div class="col">
+                                Telefone: <input class="form-control" type="text" name="tel" value="<%= busca[0].tel %>"/><br/>
+                            </div>
+                        </div>
+                    <input type="hidden" name="id_usuario" value="<%= busca[0].id_usuario %>"/>
+                    <input class="btn btn-primary"type="submit" value="Enviar"/>
+                </div>
+            </form>
+        </div>
+	</body>
+</html>
